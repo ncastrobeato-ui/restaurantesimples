@@ -29,19 +29,38 @@ header p {
 nav {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 15px;
-    background-color: #ffffff;
+    align-items: center;
+    gap: 35px;
+    padding: 18px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
     color: #7b1e1e;
     font-weight: bold;
+    padding: 5px 0;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b8860b;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 nav a:hover {
-    color: #064b1b;
+    color: #b8860b;
 }
 
 main {
